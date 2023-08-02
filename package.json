@@ -1,0 +1,39 @@
+{
+  "name": "decarbonize-node",
+  "version": "0.0.1",
+  "description": "Decarbonize nodejs | Ampeers Energy business card",
+  "main": "build.js",
+  "bin": {
+    "ampeersenergy": "bin/card.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "boxen": "^2.1.0",
+    "chalk": "^2.4.1",
+    "standard": "^12.0.1"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "node build.js",
+    "dev": "npm run build && node ./bin/card.js",
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ampeersenergy/decarbonize-node.git"
+  },
+  "keywords": [
+    "card",
+    "npm",
+    "npm card",
+    "npx",
+    "npx card",
+    "business card"
+  ],
+  "author": "Lucas Recknagel <l.recknagel@ampeersenergy.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ampeersenergy/decarbonize-node/issues"
+  },
+  "homepage": "https://ampeersenergy.de"
+}
