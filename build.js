@@ -23,15 +23,18 @@ const data = {
   // npm: chalk.gray('https://npmjs.com/') + chalk.red('~ampeersenergy'),
   github: chalk.gray('https://github.com/') + chalk.green('ampeersenergy'),
   linkedin: chalk.gray('https://www.linkedin.com/company/') + chalk.blue('ampeersenergy'),
-  web: chalk.cyan('https://ampeersenergy.de'),
-  npx: chalk.red('npx') + ' ' + chalk.white('decarbonize-node'),
+  web: chalk.cyan('https://ampeersenergy.com'),
+  // npx: chalk.red('npx') + ' ' + chalk.white('decarbonize-node'),
+  workshopClone: chalk.red('git clone') + ' ' + chalk.white('git@github.com:ampeersenergy/decarbonize-node-workshop'),
+  squirrelSift: chalk.red('  git clone') + ' ' + chalk.white('git@github.com:ampeersenergy/squirrels-sift.git'),
   labelWork: chalk.white.bold('    Work:'),
   labelTwitter: chalk.white.bold(' Twitter:'),
   // labelnpm: chalk.white.bold('     npm:'),
   labelGitHub: chalk.white.bold('  GitHub:'),
   labelLinkedIn: chalk.white.bold('LinkedIn:'),
   labelWeb: chalk.white.bold('     Web:'),
-  labelCard: chalk.white.bold('    Card:')
+  labelWorkshop: chalk.white.bold('Workshop:'),
+  labelSquirrel: chalk.white.bold('NPMCO2:')
 }
 
 // Actual strings we're going to output
@@ -44,7 +47,8 @@ const twittering = `${data.labelTwitter}  ${data.twitter}`
 const githubing = `${data.labelGitHub}  ${data.github}`
 const linkedining = `${data.labelLinkedIn}  ${data.linkedin}`
 const webing = `${data.labelWeb}  ${data.web}`
-const carding = `${data.labelCard}  ${data.npx}`
+const workshop = `${data.labelWorkshop}  ${data.workshopClone}`
+const squirrel = `${data.labelSquirrel}  ${data.squirrelSift}`
 
 // Put all our output together into a single variable so we can use boxen effectively
 const output = heading + // data.name + data.handle
@@ -56,6 +60,7 @@ const output = heading + // data.name + data.handle
                githubing + newline + // data.labelGitHub + data.github
                linkedining + newline + // data.labelLinkedIn + data.linkedin
                webing + newline + newline + // data.labelWeb + data.web
-               carding // data.labelCard + data.npx
+               workshop + newline + // data.labelWorkshop + data.workshopClone
+               squirrel // data.labelSquirrel + data.squirrelSift
 
 fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.green(boxen(output, options)))

@@ -1,6 +1,6 @@
 {
   "name": "decarbonize-node",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Decarbonize nodejs | Ampeers Energy business card",
   "main": "build.js",
   "bin": {
@@ -35,5 +35,5 @@
   "bugs": {
     "url": "https://github.com/ampeersenergy/decarbonize-node/issues"
   },
-  "homepage": "https://ampeersenergy.de"
+  "homepage": "https://ampeersenergy.com"
 }
